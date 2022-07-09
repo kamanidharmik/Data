@@ -1,0 +1,7 @@
+string select = "Select * From Buses";
+        SqlDataAdapter da = new SqlDataAdapter(select, con);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        FromDropDownList.DataTextField = "fromplace";
+        FromDropDownList.DataSource = dt;
+        FromDropDownList.DataBind();
